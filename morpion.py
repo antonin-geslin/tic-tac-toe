@@ -25,6 +25,7 @@ def display_grid(tab):
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     i = 0
     j = 0
+    print("—————--------")
     while i < 3:
         while j < 3:
             if tab[i][j] == 0:
@@ -55,7 +56,7 @@ def display_grid(tab):
                     print(" o ", end="")
                     print("|", end="")
             j+=1
-        print("—————---------")
+        print("—————--------")
         j=0
         i+=1
 
@@ -228,4 +229,6 @@ def jeu():
     print("-------------------")
     if choix == "oui":
         jeu()            
+
+
 jeu()
