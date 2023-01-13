@@ -75,6 +75,11 @@ def check(board):
         result = 2
     elif (board[1] + board[5] + board[9] == "xxx") or (board[3] + board[5] + board[7] == "xxx"):
         result = 1
+    i = 1
+    while board[i] != ' ':
+        i+=1
+    if i == 9:
+        result = 3
     return(result)
 
 def end(board):
@@ -85,6 +90,10 @@ def end(board):
     elif check(board) == 2:
         print("--------------------")
         print("les ronds ont gagnés")
+        print("--------------------")
+    elif check(board) == 3:
+        print("--------------------")
+        print("      Egalité       ")
         print("--------------------")
 
 def jeu():
